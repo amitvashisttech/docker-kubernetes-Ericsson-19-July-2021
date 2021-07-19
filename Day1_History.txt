@@ -98,3 +98,80 @@
    98  cd ..
    99  ls
   100  history > Day1_History.txt 
+  101  git add . ; git commit -m "Docker Image"; git push 
+  102  ls
+  103  docker images 
+  104  docker ps 
+  105  ls
+  106  cd 01-Docker/01-Dockerfile/apache/
+  107  ls
+  108  vim Dockerfile 
+  109  ls
+  110  vim index.html
+  111  ls
+  112  docker build -t myapache:v2 . 
+  113  docker images 
+  114  docker run -d --name test-apache-cont-2 myapache:v2
+  115  docker ps 
+  116  docker inspect test-apache-cont-2
+  117  curl 172.17.0.4
+  118  vim Dockerfile 
+  119  docker build -t myapache:v3 . 
+  120  docker run -d --name test-apache-cont-3 myapache:v3
+  121  docker ps 
+  122  ls
+  123  docker push myapache:v3
+  124  docker login 
+  125  docker push myapache:v3
+  126  docker images
+  127  docker tag 41272e1e4610 amitvashist/myapache:v3
+  128  docker images 
+  129  docker push myapache:v3
+  130  docker push amitvashist/myapache:v3
+  131  docker tag 41272e1e4610 amitvashist7/myapache:v3
+  132  docker push amitvashist7/myapache:v3
+  133  ls
+  134  docker push amitvashist7/myapache:v3
+  135  docker images 
+  136  docker tag e3d01ca01ab5 amitvashist7/myapache:v1
+  137  docker tag 72d54f0517e4 amitvashist7/myapache:v2
+  138  docker push amitvashist7/myapache:v2
+  139  docker push amitvashist7/myapache:v1
+  140  docker history amitvashist7/myapache:v1
+  141  docker history amitvashist7/myapache:v3
+  142  docker kill $(docker ps -aq)
+  143  docker rm $(docker ps -aq)
+  144  docker images 
+  145  docker images -q
+  146  docker rmi $(docker images -q)
+  147  docker rmi $(docker images -q) --force
+  148  docker images 
+  149  docker logout 
+  150  docker pull amitvashist7/myapache:v1
+  151  docker pull amitvashist7/myapache:v2
+  152  docker run -d --name test-1 amitvashist7/myapache:v3
+  153  docker ps 
+  154  docker inspect 
+  155  docker inspect test-1
+  156  curl 172.17.0.2
+  157  docker ps 
+  158  ls
+  159  vim index.html 
+  160  ls
+  161  docker build -t myapache:v3 . 
+  162  ls
+  163  docker images 
+  164  docker tag fcd4f80797d4 amitvashist7/myapache:v3
+  165  docker images 
+  166  docker run -d --name test-2 amitvashist7/myapache:v3
+  167  curl 172.17.0.3
+  168  docker login 
+  169  docker push amitvashist7/myapache:v3
+  170  ls
+  171  cd ..
+  172  ls
+  173  cd ..
+  174  ls
+  175  cd ..
+  176  ls
+  177  history > Day1_History.txt 
