@@ -1,0 +1,22 @@
+    1  history 
+    2  docker version 
+    3  docker run ubuntu echo "Welcome to Docker Demo."
+    4  docker run ubuntu echo "Hello World"
+    5  docker ps 
+    6  docker ps -a
+    7  ls
+    8  vim 01-Docker/00-Setup/install-docker.sh 
+    9  docker images 
+   10  history 
+   11  docker pull busybox 
+   12  docker images 
+   13  docker pull ubuntu:16.04
+   14  docker images 
+   15  docker pull  amitvashist7/mypython-webapp
+   16  docker images 
+   17  docker pull amitvashist7/apache-ex4
+   18  docker login 
+   19* docker pull amitvashist7/apache-ex
+   20  docker logout 
+   21  ls
+   22  history > Day1_History.txt
