@@ -67,3 +67,34 @@
    67  docker ps -a
    68  ls
    69  history > Day1_History.txt 
+   70  git add . ; git commit -m "Docker Container Opp"; git push 
+   71  docker ps 
+   72  docker ps -a
+   73  docker ps -aq
+   74  docker run -itd  --name test-3 ubuntu:16.04
+   75  docker ps 
+   76  docker ps -aq
+   77  docker container ls 
+   78  docker container ls --help
+   79  docker container ls -f --help
+   80  docker container ls -f name=test-3
+   81  docker ps 
+   82  docker inspect test-3
+   83  docker run -it --name test-apache-1 ubuntu:16.04
+   84  ls
+   85  mkdir 01-Docker/01-Dockerfile/apache -p 
+   86  ls
+   87  cd 01-Docker/01-Dockerfile/apache
+   88  ls
+   89  vim Dockerfile
+   90  ls
+   91  docker build -t myapache:v1 . 
+   92  docker images 
+   93  docker run -d --name test-apache-1 myapache:v1 
+   94  docker run -d --name test-apache-cont-1 myapache:v1 
+   95  docker ps 
+   96  docker inspect 24119b30388c
+   97  curl 172.17.0.3
+   98  cd ..
+   99  ls
+  100  history > Day1_History.txt 
