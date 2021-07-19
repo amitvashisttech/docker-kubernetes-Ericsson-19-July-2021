@@ -20,3 +20,50 @@
    20  docker logout 
    21  ls
    22  history > Day1_History.txt
+   23  git log
+   24  git add . 
+   25  git status 
+   26  git commit -m "New File Added - Day1_History.txt"
+   27  git log
+   28  git push 
+   29  ls
+   30  git pull
+   31  docker ps 
+   32  docker ps -l
+   33  docker ps -a
+   34  docker run -it ubuntu 
+   35  docker ps 
+   36  docker ps -a
+   37  docker images 
+   38  docker run -it  --name test-1 ubuntu:16.04
+   39  ls
+   40  docker ps 
+   41  docker ps -a
+   42  docker run -it  --name test-1 ubuntu:16.04
+   43  docker run -itd  --name test-2 ubuntu:16.04
+   44  docker run -itd  --name test-3 ubuntu:16.04
+   45  docker ps 
+   46  docker stop test-3 
+   47  docker kill test-2
+   48  docker ps 
+   49  docker ps -a
+   50  docker start test-3
+   51  docker ps 
+   52  docker attach d5d3130ff3ac
+   53  docker ps 
+   54  docker ps -a
+   55  docker start test-3
+   56  docker attach d5d3130ff3ac
+   57  ls
+   58  docker ps 
+   59  docker ps -a
+   60  docker rm test-1
+   61  docker ps 
+   62  docker ps -a
+   63  docker ps 
+   64  docker ps -a
+   65  docker ps -aq
+   66  docker rm $(docker ps -aq)
+   67  docker ps -a
+   68  ls
+   69  history > Day1_History.txt 
