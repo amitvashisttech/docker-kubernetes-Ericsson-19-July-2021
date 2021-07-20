@@ -316,3 +316,90 @@
   316  cd docker-kubernetes-Ericsson-19-July-2021/
   317  ls
   318  history > Day2_History.txt 
+  319  ls
+  320  git add . ; git commit -m "Docker Image"; git push 
+  321  ls
+  322  docker network ls 
+  323  docker network inspect f10bdda69852
+  324  ip addr 
+  325  docker ps 
+  326  docker ps -qa 
+  327  docker kill $(docker ps -qa)
+  328  docker network inspect f10bdda69852
+  329  docker ps 
+  330  docker ps -a
+  331  docker start myapp2
+  332  docker ps 
+  333  docker network inspect f10bdda69852
+  334  docker stop myapp2
+  335  docker images 
+  336  docker run -itd --name web1 amitvashist7/myflaskpythonapp:v2
+  337  docker ps 
+  338  curl 172.17.0.2
+  339  ip addr 
+  340  curl localhost
+  341  netstat -tulnp 
+  342  docker run -itd --name web2 -p 8080:80 amitvashist7/myflaskpythonapp:v2
+  343  docker ps 
+  344  netstat -tulnp 
+  345  curl localhost
+  346  curl localhost:8080
+  347  docker run -itd --name web3 -p 8081:80 amitvashist7/myflaskpythonapp:v2
+  348  netstat -tulnp 
+  349  docker ps 
+  350  systemctl status docker 
+  351  docker run -itd --name web4 -p 8081:80 amitvashist7/myflaskpythonapp:v2
+  352  docker run -itd --name web5 -P amitvashist7/myflaskpythonapp:v2
+  353  docker ps 
+  354  docker images 
+  355  docker history myapache:v3
+  356  docker run -itd --name web6 -P myapache:v3
+  357  docker ps 
+  358  ls
+  359  docker ps 
+  360  docker exec -it web6 ip addr 
+  361  docker exec -it web5 ip addr 
+  362  docker exec -it web6 ip addr 
+  363  docker network ls 
+  364  docker run -itd --name web7 --network none myapache:v3
+  365  docker ps 
+  366  docker exec -it web6 ip addr 
+  367  docker exec -it web7 ip addr 
+  368  docker network ls 
+  369  docker run -itd --name web8 --network host myapache:v3
+  370  docker exec -it web7 ip addr 
+  371  docker exec -it web8 ip addr 
+  372  netstat -tulnp 
+  373  docker stop web8
+  374  netstat -tulnp 
+  375  docker start web8
+  376  netstat -tulnp 
+  377  docker run -itd --name web9 --network host myapache:v3
+  378  docker ps 
+  379  netstat -tulnp 
+  380  docker stop web9 
+  381  netstat -tulnp 
+  382  docker images 
+  383  docker run -itd --name web10 --network host amitvashist7/myflaskpythonapp:v2
+  384  docker ps 
+  385  docker ps -a 
+  386  docker run -itd --name web11 --network host amitvashist7/myflaskpythonapp:v2
+  387  docker ps -a 
+  388  docker logs cf3c02ebdc2e
+  389  docker ps 
+  390  docker exec -it web7 ip addr 
+  391  docker exec -it web6 ip addr 
+  392  docker network ls 
+  393  docker network create --driver=bridge --subnet=172.28.0.0/16 --ip-range=172.28.5.0/24 --gateway=172.28.5.254 mybr0 
+  394  docker network ls 
+  395  docker network inspect mybr0
+  396  docker run -itd --name web21 --network mybr0 myapache:v3
+  397  docker ps 
+  398  docker exec -it web21 ip addr 
+  399  docker run -itd --name web22 --network mybr0 -P myapache:v3
+  400  docker ps 
+  401  docker exec -it web22 ip addr 
+  402  docker run -itd --name web23 --network mybr0 -P amitvashist7/myflaskpythonapp:v2
+  403  docker ps 
+  404  ls
+  405  history > Day2_History.txt 
