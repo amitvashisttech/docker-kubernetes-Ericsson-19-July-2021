@@ -6,7 +6,7 @@ spec:
   ports:
   - port: 31005
     nodePort: 31001
-    targetPort: node-port
+    targetPort: myappport
     protocol: TCP
   selector:
     app: helloworld

@@ -17,17 +17,9 @@ kubectl create -f sample-user.yaml
 
 ## Get login token:
 ```
-kubectl -n kube-system get secret | grep admin-user
-kubectl -n kube-system describe secret admin-user-token-<id displayed by previous command>
+kubectl -n kubernetes-dashboard  get secret | grep admin-user-1
+kubectl -n kubernetes-dashboard  describe secret admin-user-1-token-j4vkv
+
 ```
-
-# kubectl proxy --address='172.31.0.10' --port=8080 --accept-hosts='.' --accept-paths='.' &
-
-## Login to dashboard
-Go to http://api.yourdomain.com:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#!/login
-
-Login: admin
-Password: the password that is listed in ~/.kube/config (open file in editor and look for "password: ..."
-
-Choose for login token and enter the login token from the previous step
+Note: Expose dashboard svc to node port & try to access the same : https::<nodeip>:<nodeport>
 

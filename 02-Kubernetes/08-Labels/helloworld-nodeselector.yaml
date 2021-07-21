@@ -21,7 +21,5 @@ spec:
         ports:
         - name: nodejs-port
           containerPort: 80
-      imagePullSecrets:
-      - name: regcred
       nodeSelector:
         hardware: virtual
