@@ -36,5 +36,3 @@ spec:
         ports:
         - name: myapp-port
           containerPort: 8081
-      imagePullSecrets:
-      - name: regcred

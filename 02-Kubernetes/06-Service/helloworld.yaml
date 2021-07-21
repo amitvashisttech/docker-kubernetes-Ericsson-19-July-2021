@@ -21,5 +21,3 @@ spec:
         ports:
         - name: node-port
           containerPort: 80
-      imagePullSecrets:
-      - name: regcred
